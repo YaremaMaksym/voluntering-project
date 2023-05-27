@@ -5,8 +5,10 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { API } from './API';
 import { Link } from 'react-router-dom';
+
 function UserName() {
   const [data, setData] = useState({});
+  const [loading, setLoading] = useState(true); // Add loading state
   const initials = `${data.firstname?.charAt(0)}${data.surname?.charAt(0)}`; // Combine the first letters of firstname and surname
 
   useEffect(() => {
@@ -33,6 +35,8 @@ function UserName() {
         } else {
           console.log('Error:', error.message);
         }
+      } finally {
+        setLoading(false); // Set loading to false when data fetching is complete
       }
     }
     getData();
@@ -43,7 +47,10 @@ function UserName() {
 
   return (
     <Box display={'flex'} alignItems={'center'} gap='10px'>
-      {firstname && surname ? (
+      {loading ? (
+        // Display loading state
+        <Typography>Loading...</Typography>
+      ) : firstname && surname ? (
         <>
           <Box
             sx={{

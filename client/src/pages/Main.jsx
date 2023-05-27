@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Box, Button } from '@mui/material';
 import MainText from '../components/MainText';
 import Lviv from '../components/ProjectStates/Lviv';
@@ -8,10 +8,12 @@ import Odesa from '../components/ProjectStates/Odesa';
 import Sumy from '../components/ProjectStates/Sumy';
 import Header from '../components/Header/Header';
 import Person from '/main-person.png';
-
+import axios from 'axios';
+import { API } from '../components/API';
 import { Colors } from '../styles';
 
 function Main() {
+  const [data, setData] = useState([]);
   const [isDepo, setIsDepo] = useState(false);
   const [isPurchase, setIsPurchase] = useState(false);
   const [isCreadite, setIsCreadite] = useState(false);
@@ -58,6 +60,34 @@ function Main() {
     setIsEdit((prevIsActive) => !prevIsActive);
   };
 
+  useEffect(() => {
+    async function getData() {
+      const responseData = localStorage.getItem('responseData');
+      let parsedData;
+
+      if (responseData) {
+        parsedData = JSON.parse(responseData);
+      }
+
+      try {
+        const response = await axios.get(API + '/api/v1/event', {
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${parsedData}`,
+          },
+        });
+        setData(response.data);
+        console.log(response.data);
+      } catch (error) {
+        if (error.response) {
+          console.log(error.response.data.message);
+        } else {
+          console.log('Error:', error.message);
+        }
+      }
+    }
+    getData();
+  }, []);
   return (
     <>
       <Box m='0 auto' width='1280px' padding='43px 66px'>
