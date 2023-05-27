@@ -1,3 +1,81 @@
+GET http://localhost:8080/api/v1/event/search/nam
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Cookie: JSESSIONID=66DD2E159038954B0ABE7EC8FA28132E
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-05-27T233802.200.json
+
+###
+
+GET http://localhost:8080/api/v1/event/search/nam
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Cookie: JSESSIONID=66DD2E159038954B0ABE7EC8FA28132E
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-05-27T233759.200.json
+
+###
+
+GET http://localhost:8080/api/v1/event/search/name12
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Cookie: JSESSIONID=66DD2E159038954B0ABE7EC8FA28132E
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-05-27T233749.200.json
+
+###
+
+GET http://localhost:8080/api/v1/event/search/name13
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Cookie: JSESSIONID=66DD2E159038954B0ABE7EC8FA28132E
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-05-27T233732.200.json
+
+###
+
+GET http://localhost:8080/api/v1/event/search/name
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Cookie: JSESSIONID=66DD2E159038954B0ABE7EC8FA28132E
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-05-27T233721.200.json
+
+###
+
+POST http://localhost:8080/api/v1/event
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbWFpbDMiLCJpYXQiOjE2ODUyMTI1NTN9.hBJnsK67ThiBMzQiVhNKZyKgqeJHdX5EUikmR5K3zxg
+Content-Type: application/json
+Content-Length: 115
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Cookie: JSESSIONID=66DD2E159038954B0ABE7EC8FA28132E
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name" : "name12",
+  "city" : "city",
+  "description" : "description name13",
+  "phoneNumber" : "phoneNumber"
+}
+
+###
+
+GET http://localhost:8080/api/v1/event
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Cookie: JSESSIONID=66DD2E159038954B0ABE7EC8FA28132E
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-05-27T233517.200.json
+
+###
+
 PUT http://localhost:8080/api/v1/event/2
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbWFpbDYiLCJpYXQiOjE2ODUyMTgwNTJ9.LBJKFjRpVn-uUuVUxV-qzTRHMzQVB84m27MBBz4TJl0
@@ -598,54 +676,6 @@ Accept-Encoding: br,deflate,gzip,x-gzip
 }
 
 <> 2023-05-27T171603.200.txt
-
-###
-
-POST http://localhost:8080/user/login
-Content-Type: application/json
-Content-Length: 47
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "email" : "email2",
-  "password" : "pass"
-}
-
-<> 2023-05-27T171551.404.json
-
-###
-
-POST http://localhost:8080/api/v1/registration
-Content-Type: application/json
-Content-Length: 47
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "email" : "email2",
-  "password" : "pass"
-}
-
-<> 2023-05-27T171529.409.json
-
-###
-
-POST http://localhost:8080/api/v1/registration
-Content-Type: application/json
-Content-Length: 47
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "email" : "email2",
-  "password" : "pass"
-}
-
-<> 2023-05-27T171527.200.txt
 
 ###
 

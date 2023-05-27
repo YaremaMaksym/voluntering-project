@@ -8,6 +8,8 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Repository
 public interface EventRepository extends JpaRepository<Event, Long> {
 
@@ -15,5 +17,8 @@ public interface EventRepository extends JpaRepository<Event, Long> {
     @Modifying
     @Query(value = "INSERT INTO Applicants (event_id, volunteer_id) VALUES (:eventId, :volunteerId)", nativeQuery = true)
     void addApplicantToEvent(Long eventId, Long volunteerId);
+
+    @Query(value = "SELECT * FROM Event WHERE name LIKE %:searchedText% OR description LIKE %:searchedText%", nativeQuery = true)
+    List<Event> searchEvents(@Param("searchedText") String searchedText);
 }
 

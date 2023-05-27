@@ -26,6 +26,10 @@ public class EventService {
         return eventRepository.findById(id).orElseThrow(() -> new IllegalStateException("Event with id " + id + " does not exist"));
     }
 
+    public List<Event> searchEvents(String searchedText) {
+        return eventRepository.searchEvents(searchedText);
+    }
+
     @Transactional
     public void addEvent(EventDTO eventDTO) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
