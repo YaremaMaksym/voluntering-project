@@ -25,7 +25,6 @@ public class EventService {
 
         Event event = Event.builder()
                 .name(eventDTO.name())
-                .status(eventDTO.status())
                 .city(eventDTO.city())
                 .description(eventDTO.description())
                 .phoneNumber(eventDTO.phoneNumber())
@@ -35,9 +34,9 @@ public class EventService {
         eventRepository.save(event);
     }
 
-    public void addApplicantToEvent(Long eventId) {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        Volunteer volunteer = volunteerService.getVolunteerByEmail(authentication.getName());
-        eventRepository.addApplicantToEvent(eventId, volunteer);
-    }
+//    public void addApplicantToEvent(Long eventId) {
+//        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+//        Volunteer volunteer = volunteerService.getVolunteerByEmail(authentication.getName());
+//        eventRepository.addApplicantToEvent(eventId, volunteer);
+//    }
 }

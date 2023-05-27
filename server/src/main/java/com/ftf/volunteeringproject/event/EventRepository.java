@@ -11,9 +11,9 @@ import org.springframework.transaction.annotation.Transactional;
 @Repository
 public interface EventRepository extends JpaRepository<Event, Long> {
 
-    @Transactional
-    @Modifying
-    @Query("Applicants e SET e.applicants = :volunteer_id WHERE e.id = :eventId")
-    void addApplicantToEvent(@Param("eventId") Long eventId, @Param("volunteer_id") Long volunteerId);
+//    @Transactional
+//    @Modifying
+//    @Query("Applicants e SET e.applicants = :volunteer_id WHERE e.id = :eventId")
+//    void addApplicantToEvent(@Param("eventId") Long eventId, @Param("volunteer_id") Long volunteerId);
 }
 

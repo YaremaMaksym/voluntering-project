@@ -21,8 +21,8 @@ public class EventController {
         eventService.addEvent(eventDTO);
     }
 
-    @PostMapping("/{eventId}/applicants")
-    public void addApplicantToEvent(@PathVariable Long eventId){
-        eventService.addApplicantToEvent(eventId);
-    }
+//    @PostMapping("/{eventId}/applicants")
+//    public void addApplicantToEvent(@PathVariable Long eventId){
+//        eventService.addApplicantToEvent(eventId);
+//    }
 }
