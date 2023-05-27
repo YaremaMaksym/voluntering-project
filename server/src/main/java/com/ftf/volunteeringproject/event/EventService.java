@@ -30,6 +30,7 @@ public class EventService {
                 .phoneNumber(eventDTO.phoneNumber())
                 .build();
 
+        event.setStatus(EventStatus.PREPARATION);
         event.setOrganizerId(volunteer.getId());
         eventRepository.save(event);
     }
