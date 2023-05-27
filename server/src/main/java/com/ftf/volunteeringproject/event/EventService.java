@@ -1,13 +1,16 @@
 package com.ftf.volunteeringproject.event;
 
+import com.ftf.volunteeringproject.exception.ResourceNotFoundException;
 import com.ftf.volunteeringproject.volunteer.Volunteer;
 import com.ftf.volunteeringproject.volunteer.VolunteerService;
+import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Objects;
 
 @AllArgsConstructor
 @Service
@@ -19,6 +22,11 @@ public class EventService {
         return eventRepository.findAll();
     }
 
+    public Event getEventById(Long id) {
+        return eventRepository.findById(id).orElseThrow(() -> new IllegalStateException("Event with id " + id + " does not exist"));
+    }
+
+    @Transactional
     public void addEvent(EventDTO eventDTO) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         Volunteer volunteer = volunteerService.getVolunteerByEmail(authentication.getName());
@@ -30,10 +38,47 @@ public class EventService {
                 .phoneNumber(eventDTO.phoneNumber())
                 .build();
 
+        event.setStatus(EventStatus.PREPARATION);
         event.setOrganizerId(volunteer.getId());
         eventRepository.save(event);
     }
 
+    @Transactional
+    public void updateEvent(EventDTO eventDTO, Long id){
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        Volunteer currentVolunteer = volunteerService.getVolunteerByEmail(authentication.getName());
+        Event updatedEvent = getEventById(id);
+
+        if (!Objects.equals(currentVolunteer.getId(), updatedEvent.getOrganizerId())) {
+            throw new ResourceNotFoundException("You are not having any event with id " + id);
+        }
+
+        updatedEvent.setName(eventDTO.name());
+        updatedEvent.setCity(eventDTO.city());
+        updatedEvent.setDescription(eventDTO.description());
+        updatedEvent.setPhoneNumber(eventDTO.phoneNumber());
+        eventRepository.save(updatedEvent);
+    }
+
+    @Transactional
+    public void deleteEventById(Long id) {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        Volunteer currentVolunteer = volunteerService.getVolunteerByEmail(authentication.getName());
+        Event event = getEventById(id);
+
+        if (!Objects.equals(currentVolunteer.getId(), event.getOrganizerId())) {
+            throw new ResourceNotFoundException("You are not having any event with id " + id);
+        }
+
+        eventRepository.deleteById(id);
+    }
+
+    @Transactional
+    public void deleteAllEvents() {
+        eventRepository.deleteAll();
+    }
+
+    @Transactional
     public void addApplicantToEvent(Long eventId) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         Volunteer volunteer = volunteerService.getVolunteerByEmail(authentication.getName());

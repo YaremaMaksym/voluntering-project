@@ -21,8 +21,24 @@ public class EventController {
         eventService.addEvent(eventDTO);
     }
 
-//    @PostMapping("/{eventId}/applicants")
-//    public void addApplicantToEvent(@PathVariable Long eventId){
-//        eventService.addApplicantToEvent(eventId);
-//    }
+    @PutMapping("/{id}")
+    public void updateEvent(@RequestBody EventDTO eventDTO, @PathVariable Long id){
+        eventService.updateEvent(eventDTO, id);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteEvent(@PathVariable Long id){
+        eventService.deleteEventById(id);
+    }
+
+    @DeleteMapping
+    public void deleteAllEvents(){
+        eventService.deleteAllEvents();
+    }
+
+
+    @PostMapping("/{eventId}/applicants")
+    public void addApplicantToEvent(@PathVariable Long eventId){
+        eventService.addApplicantToEvent(eventId);
+    }
 }
