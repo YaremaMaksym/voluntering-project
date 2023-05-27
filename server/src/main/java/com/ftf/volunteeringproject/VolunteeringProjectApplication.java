@@ -1,4 +1,4 @@
-package com.ftf.volunteeringproject;
+package main.java.com.ftf.volunteeringproject;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
