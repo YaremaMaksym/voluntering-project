@@ -13,7 +13,7 @@ public interface EventRepository extends JpaRepository<Event, Long> {
 
     @Transactional
     @Modifying
-    @Query("Applicants e SET e.applicants = :volunteer_id WHERE e.id = :eventId")
-    void addApplicantToEvent(@Param("eventId") Long eventId, @Param("volunteer_id") Long volunteerId);
+    @Query(value = "INSERT INTO Applicants (event_id, volunteer_id) VALUES (:eventId, :volunteerId)", nativeQuery = true)
+    void addApplicantToEvent(Long eventId, Long volunteerId);
 }
 

@@ -38,6 +38,6 @@ public class EventService {
     public void addApplicantToEvent(Long eventId) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         Volunteer volunteer = volunteerService.getVolunteerByEmail(authentication.getName());
-        eventRepository.addApplicantToEvent(eventId, volunteer);
+        eventRepository.addApplicantToEvent(eventId, volunteer.getId());
     }
 }
