@@ -1,9 +1,7 @@
 package com.ftf.volunteeringproject.volunteer;
 
 import lombok.AllArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -21,5 +19,10 @@ public class VolunteerController {
     @GetMapping("/current")
     public Volunteer getCurrentVolunteer() {
         return volunteerService.getCurrentVolunteer();
+    }
+
+    @PutMapping("/{id}")
+    public void updateVolunteer(@RequestBody VolunteerDto volunteerDto, @PathVariable Long id) {
+        volunteerService.updateVolunteer(volunteerDto, id);
     }
 }

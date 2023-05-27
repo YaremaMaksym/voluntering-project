@@ -10,6 +10,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Objects;
 
 @Service
 @AllArgsConstructor
@@ -24,9 +25,27 @@ public class VolunteerService {
                 ));
     }
 
+    public Volunteer getVolunteerById(Long id) {
+        return volunteerRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException(
+                        "volunteer with id \"%s\" not found".formatted(id)
+                ));
+    }
+
     public Volunteer getCurrentVolunteer() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         return getVolunteerByEmail(authentication.getName());
+    }
+
+    @Transactional
+    public void updateVolunteer(VolunteerDto volunteerDto, Long id) {
+        Volunteer updatedVolunteer = getVolunteerById(id);
+        updatedVolunteer.setFirstname(volunteerDto.firstname());
+        updatedVolunteer.setSurname(volunteerDto.surname());
+        updatedVolunteer.setEmail(volunteerDto.email());
+        updatedVolunteer.setPassword(bCryptPasswordEncoder.encode(volunteerDto.password()));
+        volunteerRepository.save(updatedVolunteer);
+        // need to update jwt token after changing email or password
     }
 
     @Transactional
