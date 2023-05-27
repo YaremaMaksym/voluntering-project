@@ -2,9 +2,12 @@ package com.ftf.volunteeringproject.volunteer;
 
 import com.ftf.volunteeringproject.exception.ResourceNotFoundException;
 import com.ftf.volunteeringproject.registration.RegistrationDto;
+import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 @AllArgsConstructor
@@ -19,6 +22,7 @@ public class VolunteerService {
                 ));
     }
 
+    @Transactional
     public void addVolunteer(RegistrationDto registrationDto) {
         Volunteer volunteer = Volunteer.builder()
                 .email(registrationDto.email())
@@ -27,5 +31,9 @@ public class VolunteerService {
                 .surname(registrationDto.surname())
                 .build();
         volunteerRepository.save(volunteer);
+    }
+
+    public List<Volunteer> getAllVolunteers() {
+        return volunteerRepository.findAll();
     }
 }
