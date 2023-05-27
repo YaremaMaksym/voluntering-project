@@ -1,14 +1,15 @@
 import { Typography } from '@mui/material';
 import PropTypes from 'prop-types';
 
-function MainText({ value1 }) {
+function MainText(props) {
   return (
     <Typography
       fontFamily={'Commissioner, sans-serif'}
       fontSize={45}
       fontWeight={700}
+      {...props}
     >
-      {value1}
+      {props.value1}
     </Typography>
   );
 }

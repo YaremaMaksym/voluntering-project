@@ -5,16 +5,11 @@ import { styled } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
 // import StatsIcon from '/stats.svg';
 // import SettingIcon from '/setting.svg';
-import PropTypes from 'prop-types';
 
 const Item = styled(Paper)(() => ({
   textAlign: 'center',
   fontSize: '17px',
 }));
-
-MainNavigation.propTypes = {
-  value: PropTypes.string.isRequired,
-};
 
 const ItemLink = styled(Link)(() => ({
   display: 'flex',

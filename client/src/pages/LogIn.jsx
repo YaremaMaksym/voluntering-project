@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Logo from '/logo.svg';
 import { Box, Typography, TextField, IconButton } from '@mui/material';
 import { Colors } from '../styles';
@@ -9,6 +9,7 @@ import { Visibility, VisibilityOff } from '@mui/icons-material';
 import MainText from '../components/MainText';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { API } from '../components/API';
 import People from '/people.png';
 function LogIn() {
   const navigate = useNavigate();
@@ -50,29 +51,25 @@ function LogIn() {
     e.preventDefault();
     const login = { email, password };
     if (validateForm()) {
-      // try {
-      //   const response = await axios.post(
-      //     'https://financial-monitor-production.up.railway.app/api/v1/login',
-      //     login,
-      //     {
-      //       headers: {
-      //         'Content-Type': 'application/json',
-      //       },
-      //     }
-      //   );
-      //   localStorage.setItem('responseData', JSON.stringify(response.data.jwt));
+      try {
+        const response = await axios.post(API + '/api/v1/login', login, {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
+        localStorage.setItem('responseData', JSON.stringify(response.data));
 
-      //   // Navigate to MainPage.js
-      //   navigate('/');
-      // } catch (error) {
-      //   if (error.response) {
-      //     console.log(error.response.data.message);
-      //     setUserErrors(error.response.data.message);
-      //   } else {
-      //     console.log('Error:', error.message);
-      //   }
-      // }
-      console.log('Valdaterd');
+        // Navigate to MainPage.js
+        navigate('/');
+      } catch (error) {
+        if (error.response) {
+          console.log(error.response.data.message);
+          setUserErrors(error.response.data.message);
+        } else {
+          console.log('Error:', error.message);
+        }
+      }
+      console.log('Valdated');
     }
   };
 

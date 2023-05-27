@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Box, Typography, TextField } from '@mui/material';
 import { Colors } from '../styles';
 import { Link } from 'react-router-dom';
@@ -11,6 +11,7 @@ import TransitionsModal from '../components/Modal';
 import AuthorBtn from '../components/ButtonSubmit';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 import { IconButton } from '@mui/material';
+import { API } from '../components/API';
 function SignUp() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -68,27 +69,27 @@ function SignUp() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (validateForm()) {
-      // const signup = { firstName, surname, email, password };
-      // try {
-      //   const response = await axios.post(
-      //     'https://financial-monitor-production.up.railway.app/api/v1/registration',
-      //     signup,
-      //     {
-      //       headers: {
-      //         'Content-Type': 'application/json',
-      //       },
-      //     }
-      //   );
-      //   localStorage.setItem('responseData', JSON.stringify(response.data.jwt));
-      //   console.log(response.data);
-      // } catch (error) {
-      //   if (error.response) {
-      //     setMessage(error.response.data.message);
-      //     console.log(error.response.data.message);
-      //   } else {
-      //     console.log('Error:', error.message);
-      //   }
-      // }
+      const signup = { firstname: firstName, surname, email, password };
+      try {
+        const response = await axios.post(
+          API + '/api/v1/registration',
+          signup,
+          {
+            headers: {
+              'Content-Type': 'application/json',
+            },
+          }
+        );
+        localStorage.setItem('responseData', JSON.stringify(response.data));
+        console.log(response.data);
+      } catch (error) {
+        if (error.response) {
+          setMessage(error.response.data.message);
+          console.log(error.response.data.message);
+        } else {
+          console.log('Error:', error.message);
+        }
+      }
       console.log('Validated');
     }
   };
