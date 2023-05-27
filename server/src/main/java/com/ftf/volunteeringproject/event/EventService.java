@@ -25,7 +25,6 @@ public class EventService {
 
         Event event = Event.builder()
                 .name(eventDTO.name())
-                .status(eventDTO.status())
                 .city(eventDTO.city())
                 .description(eventDTO.description())
                 .phoneNumber(eventDTO.phoneNumber())
