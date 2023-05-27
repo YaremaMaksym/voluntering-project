@@ -4,6 +4,8 @@ import com.ftf.volunteeringproject.exception.ResourceNotFoundException;
 import com.ftf.volunteeringproject.registration.RegistrationDto;
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -20,6 +22,11 @@ public class VolunteerService {
                 .orElseThrow(() -> new ResourceNotFoundException(
                         "volunteer with email \"%s\" not found".formatted(email)
                 ));
+    }
+
+    public Volunteer getCurrentVolunteer() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        return getVolunteerByEmail(authentication.getName());
     }
 
     @Transactional

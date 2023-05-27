@@ -18,4 +18,8 @@ public class VolunteerController {
         return volunteerService.getAllVolunteers();
     }
 
+    @GetMapping("/current")
+    public Volunteer getCurrentVolunteer() {
+        return volunteerService.getCurrentVolunteer();
+    }
 }
