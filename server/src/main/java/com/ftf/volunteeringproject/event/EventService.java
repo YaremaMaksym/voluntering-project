@@ -88,4 +88,14 @@ public class EventService {
         Volunteer volunteer = volunteerService.getVolunteerByEmail(authentication.getName());
         eventRepository.addApplicantToEvent(eventId, volunteer.getId());
     }
+
+    public String changeStatusOfEvent(Long eventId, String statusParam) {
+        EventStatus status = EventStatus.valueOf(statusParam.toUpperCase());
+
+        Event event = getEventById(eventId);
+        event.setStatus(status);
+        eventRepository.save(event);
+
+        return "Received status: " + status;
+    }
 }

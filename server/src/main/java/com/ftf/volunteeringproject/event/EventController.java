@@ -26,6 +26,15 @@ public class EventController {
         eventService.addEvent(eventDTO);
     }
 
+    @PostMapping("/{eventId}/applicants")
+    public void addApplicantToEvent(@PathVariable Long eventId){
+        eventService.addApplicantToEvent(eventId);
+    }
+
+    @PutMapping("/{eventId}")
+    public String changeStatusOfEvent(@PathVariable("eventId") Long eventId, @RequestParam("status") String statusParam) {
+        return eventService.changeStatusOfEvent(eventId, statusParam);
+    }
     @PutMapping("/{id}")
     public void updateEvent(@RequestBody EventDTO eventDTO, @PathVariable Long id){
         eventService.updateEvent(eventDTO, id);
