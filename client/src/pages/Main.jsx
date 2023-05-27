@@ -8,9 +8,11 @@ import Odesa from '../components/ProjectStates/Odesa';
 import Sumy from '../components/ProjectStates/Sumy';
 import Header from '../components/Header/Header';
 import Person from '/main-person.png';
+import Location from '/location.svg';
 import axios from 'axios';
 import { API } from '../components/API';
 import { Colors } from '../styles';
+import { Typography } from '@mui/material';
 
 function Main() {
   const [data, setData] = useState([]);
@@ -148,7 +150,41 @@ function Main() {
             {isIncome && <Odesa />}
             {isEdit && <Sumy />}
             {!isDepo && !isPurchase && !isCreadite && !isIncome && !isEdit && (
-              <Box>all</Box>
+              <Box>
+                {data.map((item) => {
+                  const { id, name, city, description, phoneNumber } = item;
+                  return (
+                    <Box
+                      key={id}
+                      sx={{
+                        fontFamily: 'Commissioner, sans-serif',
+                        width: '500px',
+                      }}
+                    >
+                      <Box display='flex' alignItems='center'>
+                        <Typography fontSize='24px' fontWeight='bold'>
+                          {name}
+                        </Typography>
+                        <Box display='flex'>
+                          <img src={Location} alt='' />
+                          <Typography
+                            fontSize='12px'
+                            fontWeight='bold'
+                            color='grey'
+                          >
+                            {city}
+                          </Typography>
+                        </Box>
+                      </Box>
+                      <Box sx={{ maxWidth: '100%', wordBreak: 'break-word' }}>
+                        <Typography sx={{ fontSize: '14px' }}>
+                          {description}
+                        </Typography>
+                      </Box>
+                    </Box>
+                  );
+                })}
+              </Box>
             )}
           </Box>
           <img src={Person} alt='' />

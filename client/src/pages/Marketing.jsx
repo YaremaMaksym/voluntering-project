@@ -168,7 +168,7 @@ function Marketing() {
                   fontFamily: 'Commissioner, sans-serif',
                 }}
               >
-                ТЕкст
+                Допоможи та отримуй омріяний подарунок у винагороду
               </Typography>
               <Button
                 variant='contained'
@@ -248,7 +248,7 @@ function Marketing() {
                   fontFamily: 'Commissioner, sans-serif',
                 }}
               >
-                ТЕкст
+                Допоможи та отримуй омріяний подарунок у винагороду
               </Typography>
               <Button
                 variant='contained'
