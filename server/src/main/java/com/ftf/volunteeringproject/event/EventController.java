@@ -21,6 +21,11 @@ public class EventController {
         return eventService.searchEvents(searchedText);
     }
 
+    @GetMapping("/location/{location}")
+    public List<Event> getEventsByLocation(@PathVariable String location) {
+        return eventService.getEventsByLocation(location);
+    }
+
     @PostMapping
     public void addEvent(@RequestBody EventDTO eventDTO) {
         eventService.addEvent(eventDTO);

@@ -30,6 +30,10 @@ public class EventService {
         return eventRepository.searchEvents(searchedText);
     }
 
+    public List<Event> getEventsByLocation(String location) {
+        return eventRepository.getEventsByLocation(location);
+    }
+
     @Transactional
     public void addEvent(EventDTO eventDTO) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();

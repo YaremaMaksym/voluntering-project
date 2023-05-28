@@ -20,5 +20,8 @@ public interface EventRepository extends JpaRepository<Event, Long> {
 
     @Query(value = "SELECT * FROM Event WHERE name LIKE %:searchedText% OR city LIKE %:searchedText% OR description LIKE %:searchedText%", nativeQuery = true)
     List<Event> searchEvents(@Param("searchedText") String searchedText);
+
+    @Query(value = "SELECT * FROM Event WHERE city LIKE %:location%", nativeQuery = true)
+    List<Event> getEventsByLocation(@Param("location") String location);
 }
 
