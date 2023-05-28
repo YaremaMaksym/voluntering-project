@@ -42,10 +42,7 @@ public class VolunteerService {
         Volunteer updatedVolunteer = getVolunteerById(id);
         updatedVolunteer.setFirstname(volunteerDto.firstname());
         updatedVolunteer.setSurname(volunteerDto.surname());
-        updatedVolunteer.setEmail(volunteerDto.email());
-        updatedVolunteer.setPassword(bCryptPasswordEncoder.encode(volunteerDto.password()));
         volunteerRepository.save(updatedVolunteer);
-        // need to update jwt token after changing email or password
     }
 
     @Transactional
