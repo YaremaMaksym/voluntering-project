@@ -2,6 +2,7 @@ package com.ftf.volunteeringproject.event;
 
 import com.ftf.volunteeringproject.exception.ResourceNotFoundException;
 import com.ftf.volunteeringproject.volunteer.Volunteer;
+import com.ftf.volunteeringproject.volunteer.VolunteerRepository;
 import com.ftf.volunteeringproject.volunteer.VolunteerService;
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
@@ -17,6 +18,7 @@ import java.util.Objects;
 public class EventService {
     private EventRepository eventRepository;
     private VolunteerService volunteerService;
+    private VolunteerRepository volunteerRepository;
 
     public List<Event> getAllEvents() {
         return eventRepository.findAll();
@@ -91,6 +93,7 @@ public class EventService {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         Volunteer volunteer = volunteerService.getVolunteerByEmail(authentication.getName());
         volunteer.setMark(volunteer.getMark() + 1);
+        volunteerRepository.save(volunteer);
 
         eventRepository.addApplicantToEvent(eventId, volunteer.getId());
     }
