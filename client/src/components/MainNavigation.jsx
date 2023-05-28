@@ -26,8 +26,13 @@ export default function MainNavigation() {
           <ItemLink to='/createproject'>Створити проект</ItemLink>
         </Item>
 
-        <Item elevation={0}>
-          <ItemLink to='/transactions'>Збори</ItemLink>
+        <Item
+          sx={{ fontFamily: 'Commissioner, sans-serif' }}
+          elevation={0}
+          style={{ cursor: 'pointer' }}
+        >
+          Збори
+          {/* <ItemLink to='/transactions'>Збори</ItemLink> */}
         </Item>
 
         <Item elevation={0}>

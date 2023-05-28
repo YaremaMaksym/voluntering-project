@@ -267,7 +267,12 @@ function Main() {
                           {description}
                         </Typography>
                       </Box>
-                      <Box display='flex' alignItems='center' gap='10px'>
+                      <Box
+                        display='flex'
+                        alignItems='center'
+                        gap='10px'
+                        margin='10px 0'
+                      >
                         <img src={Call} alt='' />
                         <Typography>{phoneNumber}</Typography>
                       </Box>

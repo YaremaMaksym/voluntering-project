@@ -4,7 +4,6 @@ import Logo from '/logo.svg';
 import { Link } from 'react-router-dom';
 import UserName from '../components/userName';
 import MainText from '../components/MainText';
-import AuthorBtn from '../components/ButtonSubmit';
 import { Colors } from '../styles';
 import { Typography } from '@mui/material';
 
@@ -37,7 +36,11 @@ function Marketing() {
         </Link>
         <UserName />
       </Box>
-      <MainText value1='Оберіть вашу мету:' marginTop='50px' />
+      <MainText
+        value1='Обери свою мету:'
+        marginTop='50px'
+        marginBottom='20px'
+      />
       <Box>
         {showButtons && (
           <Box display={'flex'} gap='50px'>
@@ -134,7 +137,11 @@ function Marketing() {
                 роботу волонтера, а інвестиція в майбутнє нашої спільноти,
                 допомога досягти реальної зміни та позитивного впливу.
               </Typography>
-              <Button variant='contained' onClick={handleBackClick}>
+              <Button
+                variant='contained'
+                onClick={handleBackClick}
+                sx={{ borderRadius: '50px' }}
+              >
                 Назад
               </Button>
             </Box>
@@ -157,6 +164,7 @@ function Marketing() {
                   color: Colors.white,
                   fontSize: '40px',
                   fontFamily: 'Commissioner, sans-serif',
+                  marginTop: '40px',
                 }}
               >
                 Для чого це мені?
@@ -166,6 +174,7 @@ function Marketing() {
                   color: Colors.white,
                   fontSize: '22px',
                   fontFamily: 'Commissioner, sans-serif',
+                  padding: '20px',
                 }}
               >
                 Допоможи та отримуй омріяний подарунок у винагороду
@@ -214,7 +223,11 @@ function Marketing() {
                 життя інших, розвиватись як особистість та відкрити для себе
                 нові можливості та перспективи.
               </Typography>
-              <Button variant='contained' onClick={handleBackClick}>
+              <Button
+                variant='contained'
+                onClick={handleBackClick}
+                sx={{ borderRadius: '50px' }}
+              >
                 Назад
               </Button>
             </Box>
@@ -237,6 +250,7 @@ function Marketing() {
                   color: Colors.white,
                   fontSize: '40px',
                   fontFamily: 'Commissioner, sans-serif',
+                  marginTop: '40px',
                 }}
               >
                 Для чого це мені?
@@ -245,6 +259,7 @@ function Marketing() {
                 sx={{
                   color: Colors.white,
                   fontSize: '22px',
+                  padding: '20px',
                   fontFamily: 'Commissioner, sans-serif',
                 }}
               >

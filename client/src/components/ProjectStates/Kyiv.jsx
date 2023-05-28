@@ -1,4 +1,3 @@
-import React from 'react';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { API } from '../API';
@@ -28,7 +27,6 @@ function Kyiv() {
           },
         }
       );
-      console.log(response.data); // Handle the response data as needed
     } catch (error) {
       console.error('Error:', error);
     }
@@ -50,7 +48,6 @@ function Kyiv() {
           },
         });
         setData(response.data);
-        console.log(response.data);
       } catch (error) {
         if (error.response) {
           console.log(error.response.data.message);

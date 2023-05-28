@@ -28,7 +28,6 @@ function Sumy() {
           },
         }
       );
-      console.log(response.data); // Handle the response data as needed
     } catch (error) {
       console.error('Error:', error);
     }
@@ -50,7 +49,6 @@ function Sumy() {
           },
         });
         setData(response.data);
-        console.log(response.data);
       } catch (error) {
         if (error.response) {
           console.log(error.response.data.message);

@@ -7,7 +7,6 @@ import Logo from '/logo.svg';
 import People from '/people.png';
 import MainText from '../components/MainText';
 import axios from 'axios';
-import TransitionsModal from '../components/Modal';
 import AuthorBtn from '../components/ButtonSubmit';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 import { IconButton } from '@mui/material';
@@ -254,31 +253,22 @@ function SignUp() {
                   {seePassword ? <VisibilityOff /> : <Visibility />}
                 </IconButton>
               </Box>
-              {email &&
-              password &&
-              confirmPassword &&
-              Object.keys(errors).length === 0 ? (
-                <TransitionsModal
-                  sx={{ marginTop: '70px', marginLeft: '75px' }}
-                  email={email}
-                  password={password}
-                />
-              ) : (
+              {
                 <AuthorBtn
                   type='submit'
                   text='Sign Up'
                   sx={{ marginTop: '70px', marginLeft: '75px' }}
                 />
-              )}
+              }
             </form>
           </Box>
         </Box>
 
         <Box>
-          <Box>
+          <Box marginLeft={'400px'}>
             <img src={Logo} alt='Budget Buddy' />
           </Box>
-          <Box>
+          <Box marginTop={'150px'}>
             <img src={People} alt='' />
           </Box>
         </Box>

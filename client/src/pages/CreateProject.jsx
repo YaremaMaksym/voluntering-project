@@ -49,7 +49,6 @@ function CreateProject() {
             Authorization: `Bearer ${parsedData}`,
           },
         });
-        console.log(response.data);
       } catch (error) {
         if (error) {
           console.log(error.response.data.message);
@@ -151,7 +150,7 @@ function CreateProject() {
           </form>
         </Box>
         <Box>
-          <img src={Person} alt='' />
+          <img src={Person} alt='Person' />
         </Box>
       </Box>
     </Box>

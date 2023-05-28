@@ -69,7 +69,6 @@ function LogIn() {
           console.log('Error:', error.message);
         }
       }
-      console.log('Valdated');
     }
   };
 
@@ -189,10 +188,10 @@ function LogIn() {
           </Box>
         </Box>
         <Box>
-          <Box>
+          <Box marginLeft={'400px'}>
             <img src={Logo} alt='United together' />
           </Box>
-          <Box>
+          <Box marginTop={'150px'}>
             <img src={People} alt='' />
           </Box>
         </Box>
