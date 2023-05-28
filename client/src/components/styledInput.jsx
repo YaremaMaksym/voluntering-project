@@ -2,7 +2,7 @@ import { styled } from '@mui/system';
 import { Colors } from '../styles';
 import { Box } from '@mui/material';
 import SearchIcon from '/Search-Icon.svg';
-const Input = styled('input')({
+export const Input = styled('input')({
   width: '184px',
   padding: '10px 60px 10px 13px',
   fontSize: '17px',

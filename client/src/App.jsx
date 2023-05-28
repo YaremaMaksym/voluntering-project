@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Main from './pages/Main';
 import CreateProject from './pages/CreateProject';
 import Marketing from './pages/Marketing';
+import Profile from './pages/Profile';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path='/login' element={<LogIn />} />
           <Route path='/sign-up' element={<SignUp />} />
           <Route path='/createproject' element={<CreateProject />} />
+          <Route path='/profile' element={<Profile />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

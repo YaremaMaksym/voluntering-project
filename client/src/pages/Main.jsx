@@ -5,22 +5,30 @@ import Lviv from '../components/ProjectStates/Lviv';
 import Kyiv from '../components/ProjectStates/Kyiv';
 import Dnipro from '../components/ProjectStates/Dnipro';
 import Odesa from '../components/ProjectStates/Odesa';
+import SearchIcon from '/Search-Icon.svg'; // Corrected import path
 import Sumy from '../components/ProjectStates/Sumy';
-import Header from '../components/Header/Header';
-import Person from '/main-person.png';
-import Location from '/location.svg';
+import Logo from '/logo.svg'; // Corrected import path
+import MainNavigation from '../components/MainNavigation';
+import { Input } from '../components/styledInput';
+import { Link } from 'react-router-dom';
+import UserName from '../components/userName';
+import Person from '/main-person.png'; // Corrected import path
+import Location from '/location.svg'; // Corrected import path
 import axios from 'axios';
 import { API } from '../components/API';
 import { Colors } from '../styles';
 import { Typography } from '@mui/material';
+import Call from '/call.svg'; // Corrected import path
 
 function Main() {
+  const [status, setStatus] = useState(null);
   const [data, setData] = useState([]);
   const [isDepo, setIsDepo] = useState(false);
   const [isPurchase, setIsPurchase] = useState(false);
   const [isCreadite, setIsCreadite] = useState(false);
   const [isIncome, setIsIncome] = useState(false);
   const [isEdit, setIsEdit] = useState(false);
+  const [inputData, setInputData] = useState('');
 
   const toggleDepo = () => {
     setIsDepo((prevIsActive) => !prevIsActive);
@@ -62,6 +70,48 @@ function Main() {
     setIsEdit((prevIsActive) => !prevIsActive);
   };
 
+  const handleClick1 = async (id) => {
+    const responseData = localStorage.getItem('responseData');
+    let parsedData;
+
+    if (responseData) {
+      parsedData = JSON.parse(responseData);
+    }
+    console.log(id);
+    try {
+      const response = await axios.post(
+        `${API}/api/v1/event/${id}/applicants`, // Update the API endpoint with the correct path
+        { id },
+        {
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${parsedData}`,
+          },
+        }
+      );
+      console.log(response.status);
+      setStatus(response.status);
+
+      // Handle the response data as needed
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
+  const handleClick = () => {
+    // Get the searched text from the input field
+    fetch(API + `/api/v1/event/search/${inputData}`) // Fixed variable name
+      .then((response) => response.json())
+      .then((data) => {
+        // Handle the fetched data here
+        console.log(data);
+        setData(data);
+      })
+      .catch((error) => {
+        // Handle any errors
+        console.error(error);
+      });
+  };
+
   useEffect(() => {
     async function getData() {
       const responseData = localStorage.getItem('responseData');
@@ -90,10 +140,31 @@ function Main() {
     }
     getData();
   }, []);
+
   return (
     <>
       <Box m='0 auto' width='1280px' padding='43px 66px'>
-        <Header search={true} />
+        <Box display={'flex'} alignItems={'center'} gap={'100px'}>
+          <Link to='/'>
+            <img src={Logo} alt='Logo' />
+          </Link>
+          <MainNavigation />
+          <Box display='flex'>
+            <Input
+              placeholder='Пошук по назві або по місту'
+              value={inputData}
+              onChange={(e) => setInputData(e.target.value)} // Added onChange handler
+            />
+            <Box
+              color='white'
+              sx={{ marginLeft: '-40px', marginTop: '10px', cursor: 'pointer' }}
+            >
+              <img src={SearchIcon} alt='' onClick={handleClick} />
+            </Box>
+          </Box>
+          <UserName />
+        </Box>
+
         <Box mt='125px' display='flex' gap={'100px'}>
           <Box>
             <MainText value1='Проекти' />
@@ -150,9 +221,16 @@ function Main() {
             {isIncome && <Odesa />}
             {isEdit && <Sumy />}
             {!isDepo && !isPurchase && !isCreadite && !isIncome && !isEdit && (
-              <Box>
+              <Box
+                sx={{
+                  maxHeight: '500px',
+                  overflowY: 'auto',
+                  overflowX: 'hidden',
+                }}
+              >
                 {data.map((item) => {
-                  const { id, name, city, description, phoneNumber } = item;
+                  const { id, name, city, description, phoneNumber, status } =
+                    item;
                   return (
                     <Box
                       key={id}
@@ -161,7 +239,7 @@ function Main() {
                         width: '500px',
                       }}
                     >
-                      <Box display='flex' alignItems='center'>
+                      <Box display='flex' alignItems='center' gap='20px'>
                         <Typography fontSize='24px' fontWeight='bold'>
                           {name}
                         </Typography>
@@ -174,6 +252,14 @@ function Main() {
                           >
                             {city}
                           </Typography>
+                          <Typography
+                            fontSize='12px'
+                            fontWeight='bold'
+                            color='grey'
+                            ml='20px'
+                          >
+                            {status}
+                          </Typography>
                         </Box>
                       </Box>
                       <Box sx={{ maxWidth: '100%', wordBreak: 'break-word' }}>
@@ -181,6 +267,23 @@ function Main() {
                           {description}
                         </Typography>
                       </Box>
+                      <Box display='flex' alignItems='center' gap='10px'>
+                        <img src={Call} alt='' />
+                        <Typography>{phoneNumber}</Typography>
+                      </Box>
+                      <Button
+                        onClick={() => handleClick1(id)}
+                        sx={{
+                          backgroundColor: Colors.primary,
+                          color: 'white',
+                          marginBottom: '20px',
+                          '&:hover': {
+                            backgroundColor: Colors.primary, // Maintain the same color on hover
+                          },
+                        }}
+                      >
+                        Взяти участь
+                      </Button>
                     </Box>
                   );
                 })}
