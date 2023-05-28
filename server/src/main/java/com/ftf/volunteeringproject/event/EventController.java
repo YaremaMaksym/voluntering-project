@@ -36,7 +36,7 @@ public class EventController {
         eventService.addApplicantToEvent(eventId);
     }
 
-    @PutMapping("/{eventId}")
+    @PutMapping("/status/{eventId}")
     public String changeStatusOfEvent(@PathVariable("eventId") Long eventId, @RequestParam("status") String statusParam) {
         return eventService.changeStatusOfEvent(eventId, statusParam);
     }

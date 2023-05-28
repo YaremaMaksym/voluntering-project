@@ -1,3 +1,53 @@
+PUT http://localhost:8080/api/v1/event/2
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbWFpbDYiLCJpYXQiOjE2ODUyMTgwNTJ9.LBJKFjRpVn-uUuVUxV-qzTRHMzQVB84m27MBBz4TJl0
+Content-Length: 115
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Cookie: JSESSIONID=66DD2E159038954B0ABE7EC8FA28132E
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+    "name" : "name3",
+    "city" : "city",
+    "description" : "description",
+    "phoneNumber" : "phoneNumber"
+}
+
+<> 2023-05-28T062626.500.json
+
+###
+
+GET http://localhost:8080/api/v1/event
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Cookie: JSESSIONID=66DD2E159038954B0ABE7EC8FA28132E
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-05-28T062610.200.json
+
+###
+
+PUT http://localhost:8080/api/v1/event/2
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbWFpbDYiLCJpYXQiOjE2ODUyMTgwNTJ9.LBJKFjRpVn-uUuVUxV-qzTRHMzQVB84m27MBBz4TJl0
+Content-Length: 115
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Cookie: JSESSIONID=66DD2E159038954B0ABE7EC8FA28132E
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+    "name" : "name3",
+    "city" : "city",
+    "description" : "description",
+    "phoneNumber" : "phoneNumber"
+}
+
+<> 2023-05-28T062436.500.json
+
+###
+
 GET http://localhost:8080/api/v1/event/location/CiTy
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
@@ -577,44 +627,6 @@ Cookie: JSESSIONID=66DD2E159038954B0ABE7EC8FA28132E
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 <> 2023-05-27T233749.200.json
-
-###
-
-GET http://localhost:8080/api/v1/event/search/name13
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Cookie: JSESSIONID=66DD2E159038954B0ABE7EC8FA28132E
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-05-27T233732.200.json
-
-###
-
-GET http://localhost:8080/api/v1/event/search/name
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Cookie: JSESSIONID=66DD2E159038954B0ABE7EC8FA28132E
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-05-27T233721.200.json
-
-###
-
-POST http://localhost:8080/api/v1/event
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbWFpbDMiLCJpYXQiOjE2ODUyMTI1NTN9.hBJnsK67ThiBMzQiVhNKZyKgqeJHdX5EUikmR5K3zxg
-Content-Type: application/json
-Content-Length: 115
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Cookie: JSESSIONID=66DD2E159038954B0ABE7EC8FA28132E
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "name" : "name12",
-  "city" : "city",
-  "description" : "description name13",
-  "phoneNumber" : "phoneNumber"
-}
 
 ###
 
