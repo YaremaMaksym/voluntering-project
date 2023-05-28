@@ -1,3 +1,201 @@
+GET http://localhost:8080/api/v1/event/location/CiTy
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Cookie: JSESSIONID=66DD2E159038954B0ABE7EC8FA28132E
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-05-28T050343.200.json
+
+###
+
+GET http://localhost:8080/api/v1/event
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Cookie: JSESSIONID=66DD2E159038954B0ABE7EC8FA28132E
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-05-28T050329.200.json
+
+###
+
+GET http://localhost:8080/api/v1/event
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Cookie: JSESSIONID=66DD2E159038954B0ABE7EC8FA28132E
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-05-28T045035.200.json
+
+###
+
+GET http://localhost:8080/api/v1/event
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Cookie: JSESSIONID=66DD2E159038954B0ABE7EC8FA28132E
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-05-28T045032.200.json
+
+###
+
+POST http://localhost:8080/api/v1/event/102/applicants
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbWFpbDciLCJpYXQiOjE2ODUyMjU4OTB9.vWVmdDFlVLcfWMEaM41lcLLzob_fT3oF4ZIjJ9mQwiU
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Cookie: JSESSIONID=66DD2E159038954B0ABE7EC8FA28132E
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-05-28T044849.500.json
+
+###
+
+POST http://localhost:8080/api/v1/event/102/applicants
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbWFpbDciLCJpYXQiOjE2ODUyMjU4OTB9.vWVmdDFlVLcfWMEaM41lcLLzob_fT3oF4ZIjJ9mQwiU
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Cookie: JSESSIONID=66DD2E159038954B0ABE7EC8FA28132E
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-05-28T044846.500.json
+
+###
+
+POST http://localhost:8080/api/v1/event/102/applicants
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbWFpbDciLCJpYXQiOjE2ODUyMjU4OTB9.vWVmdDFlVLcfWMEaM41lcLLzob_fT3oF4ZIjJ9mQwiU
+Content-Type: application/json
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Cookie: JSESSIONID=66DD2E159038954B0ABE7EC8FA28132E
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-05-28T044836.500.json
+
+###
+
+POST http://localhost:8080/api/v1/event/102/applicants
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbWFpbDciLCJpYXQiOjE2ODUyMjU4OTB9.vWVmdDFlVLcfWMEaM41lcLLzob_fT3oF4ZIjJ9mQwiU
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Cookie: JSESSIONID=66DD2E159038954B0ABE7EC8FA28132E
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+POST http://localhost:8080/api/v1/event/102/applicants
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Cookie: JSESSIONID=66DD2E159038954B0ABE7EC8FA28132E
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-05-28T044639.404.json
+
+###
+
+GET http://localhost:8080/api/v1/event
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Cookie: JSESSIONID=66DD2E159038954B0ABE7EC8FA28132E
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-05-28T044518.200.json
+
+###
+
+GET http://localhost:8080/api/v1/event
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Cookie: JSESSIONID=66DD2E159038954B0ABE7EC8FA28132E
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-05-28T044515.200.json
+
+###
+
+GET http://localhost:8080/api/v1/event/location/city
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Cookie: JSESSIONID=66DD2E159038954B0ABE7EC8FA28132E
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-05-28T042324.200.json
+
+###
+
+GET http://localhost:8080/api/v1/event/location/city
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Cookie: JSESSIONID=66DD2E159038954B0ABE7EC8FA28132E
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-05-28T042322.200.json
+
+###
+
+GET http://localhost:8080/api/v1/event
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Cookie: JSESSIONID=66DD2E159038954B0ABE7EC8FA28132E
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-05-28T042308.200.json
+
+###
+
+GET http://localhost:8080/api/v1/event/location/львів
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Cookie: JSESSIONID=66DD2E159038954B0ABE7EC8FA28132E
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-05-28T042246.200.json
+
+###
+
+POST http://localhost:8080/api/v1/event
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbWFpbDMiLCJpYXQiOjE2ODUyMTI1NTN9.hBJnsK67ThiBMzQiVhNKZyKgqeJHdX5EUikmR5K3zxg
+Content-Type: application/json
+Content-Length: 121
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Cookie: JSESSIONID=66DD2E159038954B0ABE7EC8FA28132E
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name" : "name12",
+  "city" : "львів",
+  "description" : "description name13",
+  "phoneNumber" : "phoneNumber"
+}
+
+<> 2023-05-28T042242.500.json
+
+###
+
+POST http://localhost:8080/api/v1/event
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbWFpbDMiLCJpYXQiOjE2ODUyMTI1NTN9.hBJnsK67ThiBMzQiVhNKZyKgqeJHdX5EUikmR5K3zxg
+Content-Type: application/json
+Content-Length: 115
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Cookie: JSESSIONID=66DD2E159038954B0ABE7EC8FA28132E
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name" : "name12",
+  "city" : "city",
+  "description" : "description name13",
+  "phoneNumber" : "phoneNumber"
+}
+
+<> 2023-05-28T042235.500.json
+
+###
+
 GET http://localhost:8080/api/v1/wish
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbWFpbDciLCJpYXQiOjE2ODUyMjU4OTB9.vWVmdDFlVLcfWMEaM41lcLLzob_fT3oF4ZIjJ9mQwiU
 Connection: Keep-Alive
@@ -415,251 +613,6 @@ Accept-Encoding: br,deflate,gzip,x-gzip
   "name" : "name12",
   "city" : "city",
   "description" : "description name13",
-  "phoneNumber" : "phoneNumber"
-}
-
-###
-
-GET http://localhost:8080/api/v1/event
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Cookie: JSESSIONID=66DD2E159038954B0ABE7EC8FA28132E
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-05-27T233517.200.json
-
-###
-
-PUT http://localhost:8080/api/v1/event/2
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbWFpbDYiLCJpYXQiOjE2ODUyMTgwNTJ9.LBJKFjRpVn-uUuVUxV-qzTRHMzQVB84m27MBBz4TJl0
-Content-Length: 115
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Cookie: JSESSIONID=66DD2E159038954B0ABE7EC8FA28132E
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-    "name" : "name2",
-    "city" : "city",
-    "description" : "description",
-    "phoneNumber" : "phoneNumber"
-}
-
-<> 2023-05-27T230945.404.json
-
-###
-
-PUT http://localhost:8080/api/v1/event/2
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbWFpbDYiLCJpYXQiOjE2ODUyMTgwNTJ9.LBJKFjRpVn-uUuVUxV-qzTRHMzQVB84m27MBBz4TJl0
-Content-Length: 115
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Cookie: JSESSIONID=66DD2E159038954B0ABE7EC8FA28132E
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-    "name" : "name2",
-    "city" : "city",
-    "description" : "description",
-    "phoneNumber" : "phoneNumber"
-}
-
-<> 2023-05-27T230741.500.json
-
-###
-
-POST http://localhost:8080/api/v1/registration
-Content-Type: application/json
-Content-Length: 104
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Cookie: JSESSIONID=66DD2E159038954B0ABE7EC8FA28132E
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "email" : "email6",
-  "password" : "pass",
-    "firstname" : "firstName",
-  "surname" : "lastName"
-}
-
-<> 2023-05-27T230732.200.txt
-
-###
-
-PUT http://localhost:8080/api/v1/event/2
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbWFpbDYiLCJpYXQiOjE2ODUyMTc5MDJ9.wQgohAOKeym3wXc9PNVvkIyvAkAlmYAT3S-bYq1CvYY
-Content-Length: 115
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Cookie: JSESSIONID=66DD2E159038954B0ABE7EC8FA28132E
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-    "name" : "name2",
-    "city" : "city",
-    "description" : "description",
-    "phoneNumber" : "phoneNumber"
-}
-
-<> 2023-05-27T230513.500.json
-
-###
-
-POST https://voluntering-project-production.up.railway.app/api/v1/registration
-Content-Type: application/json
-Content-Length: 102
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "email" : "email6",
-  "password" : "pass",
-  "firstname" : "firstName",
-  "surname" : "lastName"
-}
-
-<> 2023-05-27T230502.200.txt
-
-###
-
-GET http://localhost:8080/api/v1/event
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Cookie: JSESSIONID=66DD2E159038954B0ABE7EC8FA28132E
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-05-27T230400.200.json
-
-###
-
-PUT http://localhost:8080/api/v1/event/2
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbWFpbDMiLCJpYXQiOjE2ODUyMTI1NTN9.hBJnsK67ThiBMzQiVhNKZyKgqeJHdX5EUikmR5K3zxg
-Content-Length: 115
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Cookie: JSESSIONID=66DD2E159038954B0ABE7EC8FA28132E
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-    "name" : "name1",
-    "city" : "city",
-    "description" : "description",
-    "phoneNumber" : "phoneNumber"
-}
-
-###
-
-PUT http://localhost:8080/api/v1/event/2
-Content-Type: application/json
-Content-Length: 115
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Cookie: JSESSIONID=66DD2E159038954B0ABE7EC8FA28132E
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-    "name" : "name1",
-    "city" : "city",
-    "description" : "description",
-    "phoneNumber" : "phoneNumber"
-}
-
-<> 2023-05-27T230345.404.json
-
-###
-
-GET http://localhost:8080/api/v1/event
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Cookie: JSESSIONID=66DD2E159038954B0ABE7EC8FA28132E
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-05-27T230338.200.json
-
-###
-
-GET http://localhost:8080/api/v1/event
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Cookie: JSESSIONID=66DD2E159038954B0ABE7EC8FA28132E
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-05-27T230207.200.json
-
-###
-
-DELETE http://localhost:8080/api/v1/event/52
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbWFpbDMiLCJpYXQiOjE2ODUyMTI1NTN9.hBJnsK67ThiBMzQiVhNKZyKgqeJHdX5EUikmR5K3zxg
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Cookie: JSESSIONID=66DD2E159038954B0ABE7EC8FA28132E
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-###
-
-GET http://localhost:8080/api/v1/event
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Cookie: JSESSIONID=66DD2E159038954B0ABE7EC8FA28132E
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-05-27T230116.200.json
-
-###
-
-GET https://voluntering-project-production.up.railway.app/api/v1/event
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-05-27T230026.200.json
-
-###
-
-POST https://voluntering-project-production.up.railway.app/api/v1/event
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbWFpbDUiLCJpYXQiOjE2ODUyMTUzNjB9.5HJVtOD8P0yy4ETD2k3RLPI-BSWmejXefHdsHPPINas
-Content-Type: application/json
-Content-Length: 106
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "name" : "name",
-  "city" : "city",
-  "description" : "description",
-  "phoneNumber" : "phoneNumber"
-}
-
-###
-
-GET https://voluntering-project-production.up.railway.app/api/v1/event
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-05-27T222337.200.json
-
-###
-
-POST https://voluntering-project-production.up.railway.app/api/v1/event
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbWFpbDUiLCJpYXQiOjE2ODUyMTUzNjB9.5HJVtOD8P0yy4ETD2k3RLPI-BSWmejXefHdsHPPINas
-Content-Type: application/json
-Content-Length: 106
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "name" : "name",
-  "city" : "city",
-  "description" : "description",
   "phoneNumber" : "phoneNumber"
 }
 
