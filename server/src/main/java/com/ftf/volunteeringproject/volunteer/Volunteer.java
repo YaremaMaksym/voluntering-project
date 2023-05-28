@@ -33,6 +33,7 @@ public class Volunteer {
 
     @Column(nullable = false)
     private String password;
+    private Long mark;
 
     private boolean enabled = false;
 }
